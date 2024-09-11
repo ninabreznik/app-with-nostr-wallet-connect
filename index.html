@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head><meta charset="utf-8"></head>
+  <body>
+    <script src="bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lnurl-pay@3.0.1/dist/umd/lnurl-pay.js"></script>
+    <script type="module">
+      import * as btc_connect from 'https://esm.sh/@getalby/bitcoin-connect@3.6.2'; // jsdelivr.net, skypack.dev also work
+      import * as alby_sdk from "https://esm.sh/@getalby/sdk@3.5.1"
+
+      // const {
+      //   init,
+      //   launchModal,
+      //   launchPaymentModal,
+      //   requestProvider,
+      // } = btc_connect
+
+      window.start(alby_sdk, btc_connect, LnurlPay)
+    
+      // or if you just want access to the web components:
+      // import 'https://esm.sh/@getalby/bitcoin-connect@3.6.2';
+    </script>
+  </body>
+</html>
